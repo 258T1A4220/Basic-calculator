@@ -1,0 +1,199 @@
+<!Doctype html></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:380px;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:#333;
+    margin-bottom:15px;
+}
+
+p{
+    margin:10px 0;
+    color:#555;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    font-size:18px;
+    margin:15px 0;
+    text-align:center;
+    border:2px solid #3498db;
+    border-radius:8px;
+}
+
+button{
+    padding:12px 20px;
+    margin:8px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    color:white;
+}
+
+.guess{
+    background:#3498db;
+}
+
+.guess:hover{
+    background:#217dbb;
+}
+
+.restart{
+    background:#28a745;
+}
+
+.restart:hover{
+    background:#1e7e34;
+}
+
+#message{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+#attempts,#score{
+    font-weight:bold;
+    color:#d35400;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>🎲 Number Guessing Game</h1>
+
+<p>Guess a number between <b>1 and 100</b></p>
+
+<input type="number" id="guessInput" placeholder="Enter your guess">
+
+<br>
+
+<button class="guess" onclick="checkGuess()">Guess</button>
+<button class="restart" onclick="restartGame()">Restart</button>
+
+<p id="message"></p>
+
+<p>Attempts: <span id="attempts">0</span></p>
+
+<p>Score: <span id="score">100</span></p>
+
+</div>
+
+<script>
+
+let randomNumber = Math.floor(Math.random()*100)+1;
+
+let attempts = 0;
+let score = 100;
+
+function checkGuess(){
+
+let guess = Number(document.getElementById("guessInput").value);
+
+if(guess<1 || guess>100 || isNaN(guess)){
+document.getElementById("message").innerHTML="❌ Enter a valid number (1-100)";
+return;
+}
+
+attempts++;
+document.getElementById("attempts").innerHTML=attempts;
+
+if(guess===randomNumber){
+
+document.getElementById("message").innerHTML=
+"🎉 Congratulations! You guessed the number.";
+
+}
+
+else if(guess<randomNumber){
+
+document.getElementById("message").innerHTML=
+"📉 Too Low! Try Again.";
+
+score-=10;
+
+}
+
+else{
+
+document.getElementById("message").innerHTML=
+"📈 Too High! Try Again.";
+
+score-=10;
+
+}
+
+if(score<0){
+score=0;
+}
+
+document.getElementById("score").innerHTML=score;
+
+}
+
+function restartGame(){
+
+randomNumber=Math.floor(Math.random()*100)+1;
+
+attempts=0;
+score=100;
+
+document.getElementById("attempts").innerHTML=attempts;
+document.getElementById("score").innerHTML=score;
+document.getElementById("message").innerHTML="";
+document.getElementById("guessInput").value="";
+
+}
+
+</script>
+
+</body>
+</html>html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script src="render.js"></script><!-- defines canvas, ctx, draw() -->
+  <script src="input.js"></script><!-- attaches keyboard + touch listeners -->
+  <script src="game.js"></script> <!-- state, loop, boot -->
+
+</body>
+</html>
