@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(90deg,#0f4c81,#1e88e5);
+color:white;
+padding:40px;
+text-align:center;
+}
+
+header img{
+width:170px;
+height:170px;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:15px;
+object-fit:cover;
+}
+
+header h1{
+font-size:40px;
+}
+
+header p{
+font-size:18px;
+margin-top:10px;
+}
+
+nav{
+background:#222;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:30px 0;
+}
+
+section{
+background:white;
+margin-bottom:25px;
+padding:25px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,.1);
+}
+
+section h2{
+color:#0f4c81;
+margin-bottom:15px;
+border-bottom:3px solid #0f4c81;
+display:inline-block;
+padding-bottom:5px;
+}
+
+ul{
+padding-left:20px;
+}
+
+.skill-box{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.skill{
+background:#1e88e5;
+color:white;
+padding:10px 20px;
+border-radius:25px;
+}
+
+.project{
+background:#eef5ff;
+padding:15px;
+margin-top:15px;
+border-left:5px solid #1e88e5;
+}
+
+.links a{
+display:inline-block;
+margin-right:20px;
+margin-top:10px;
+text-decoration:none;
+background:#1e88e5;
+color:white;
+padding:10px 20px;
+border-radius:5px;
+}
+
+.links a:hover{
+background:#0f4c81;
+}
+
+.contact p{
+margin:8px 0;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+button{
+background:#1e88e5;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#0f4c81;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+header img{
+width:140px;
+height:140px;
+}
+
+.skill-box{
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="/storage/emulated/0/downolad/IMG_20260729_200547.jpeg" alt="Profile Photo">
+
+<h1>Suma Darla</h1>
+
+<p>Aspiring AI & ML Engineer</p>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#education">Education</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#certificates">Certificates</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="container">
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+
+Hello! I am an enthusiastic AI & Machine Learning student with a passion for Python,
+Web Development, Data Science, and Artificial Intelligence. I enjoy learning new
+technologies and building creative projects.
+
+</p>
+
+</section>
+
+<section id="education">
+
+<h2>Department & Year</h2>
+
+<p><strong>Department:</strong> Artificial Intelligence & Machine Learning</p>
+
+<p><strong>Year:</strong> 2nd Year B.Tech</p>
+
+<p><strong>College:</strong> Dhanekula Institute of Engineering and Technology</p>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills & Technical Interests</h2>
+
+<div class="skill-box">
+
+<div class="skill">Python</div>
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">SQL</div>
+
+<div class="skill">Machine Learning</div>
+
+<div class="skill">AI</div>
+
+<div class="skill">Git</div>
+
+</div>
+
+<br>
+
+<h3>Technical Interests</h3>
+
+<ul>
+
+<li>Artificial Intelligence</li>
+
+<li>Machine Learning</li>
+
+<li>Data Science</li>
+
+<li>Web Development</li>
+
+<li>Python Programming</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Hobbies</h2>
+
+<ul>
+
+<li>Learning New Technologies</li>
+
+<li>Coding</li>
+
+<li>Reading Books</li>
+
+<li>Listening to Music</li>
+
+<li>Playing Cricket</li>
+
+</ul>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects / Mini Programs</h2>
+
+<div class="project">
+
+<h3>Basic Calculator</h3>
+
+<p>
+
+Developed using HTML, CSS, and JavaScript.
+
+Supports Addition, Subtraction, Multiplication, Division,
+Percentage, and Square Root.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Number Guessing Game</h3>
+
+<p>
+
+Random Number Generation with Hints,
+Score System, and Attempt Counter.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Student Portfolio Website</h3>
+
+<p>
+
+Personal responsive portfolio created using
+HTML, CSS, and JavaScript.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="certificates">
+
+<h2>Certificates</h2>
+
+<ul>
+
+<li>Python Programming Certificate</li>
+
+<li>Web Development Certificate</li>
+
+<li>mongodb certificate</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>GitHub & LinkedIn</h2>
+
+<div class="links">
+
+<a href="https://github.com/yourusername" target="_blank">
+GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/suma-darla-403a083b3" target="_blank">
+LinkedIn
+</a>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Details</h2>
+
+<p><strong>Name:</strong> Suma Darla</p>
+
+<p><strong>Email:</strong> sumadarla14@gmail.com</p>
+
+<p><strong>Phone:</strong> +91 9014600342</p>
+
+<p><strong>Location:</strong> Andhra Pradesh, India</p>
+
+<button onclick="message()">
+Say Hello
+</button>
+
+</section>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Your Name | Portfolio Website
+
+</p>
+
+</footer>
+
+<script>
+
+function message(){
+
+alert("Thank you for visiting my portfolio!");
+}
+</script>
+</body>
+</html>
